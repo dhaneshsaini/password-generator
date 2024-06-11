@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+main {
+    margin: auto;
+    padding: 20px;
+    max-width: 480px;
+}
+
+button {
+    color: white;
+    border: none;
+    font-weight: 600;
+    background: hsl(210, 100%, 52%);
+    border-radius: 5px;
+    border: 2px solid hsl(210, 100%, 52%);
+}
+
+button:active {
+    background: hsl(210, 100%, 49%);
+    border: 2px solid hsl(210, 100%, 49%);
+}
+
+input[type=range] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 50%;
+    height: 2px;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.1);
+    outline: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 2px;
+    cursor: pointer;
+    background: linear-gradient(to right,
+            hsl(210, 100%, 49%) var(--progress-percent),
+            rgba(255, 255, 255, 0.314) var(--progress-percent));
+}
+
+input[type="range"]::-moz-range-progress {
+    background: hsl(210, 100%, 49%);
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+    margin-top: -9px;
+    transition: all 0.15s ease-in-out;
+}
+
+input[type=range]::-webkit-slider-thumb:hover {
+    background: #d4d4d4;
+    transform: scale(1.2);
+}
+
+input[type=range]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border: 0;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+    transition: background 0.15s ease-in-out;
+}
+
+input[type=range]::-moz-range-thumb:hover {
+    background: #d4d4d4;
+}
+
+.input {
+    gap: 5px;
+    display: grid;
+}
+
+.input div {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    background: #efefef;
+    border-radius: 5px;
+    justify-content: space-between;
+}
+
+.input div span {
+    font-weight: 300;
+}
+
+.output {
+    margin-bottom: 10px;
+}
+
+input[type=text] {
+    width: 100%;
+    outline: none;
+    padding: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.switch {
+    width: 64px;
+    height: 36px;
+    padding: 3px;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    border-radius: 49px;
+    background-color: #ddd;
+    justify-content: flex-start;
+    transition: justify-content 0.5s;
+}
+
+.switch span {
+    width: 30px;
+    height: 30px;
+    display: block;
+    border-radius: 50%;
+    background: white;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+input[type=checkbox]:checked+.switch {
+    justify-content: flex-end;
+    background-color: #30d158;
+}
+
+.generator_button {
+    margin-top: 10px;
+}
+
+.generator_button button {
+    width: 100%;
+    padding: 12px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
